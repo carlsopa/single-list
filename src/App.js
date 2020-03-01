@@ -2,8 +2,21 @@ import React ,{useState} from 'react';
 import List from './components/list';
 import Header from './components/header';
 import './grocery.css'
-const Categories = ['Other','Beverages', 'Bakery', 'Canned Goods', 'Dairy', 'Baking Goods', 'Frozen Foods', 'Meat', 'Produce', 'Snacks'];
-const a = {Other:[],Beverages:[],Bakery:[],'Canned Goods':[],Dairy:[],'Baking Goods':[],'Frozen Foods':[],Meat:[],Produce:[],Snacks:[]}
+const a = {
+  'Baking Goods':[],
+  'Beverages':[],
+  'Bread/Bakery':[],
+  'Boxed and Canned Goods':[],
+  'Dairy':[],
+  'Frozen Foods':[],
+  'Grains, Pastas and Nuts': [],
+  'Meat':[],
+  'Oils, Vinegars and Sauces': [],
+  'Other':[],
+  'Produce':[],
+  'Snacks':[],
+  'Spices': []
+}
 function App() {
   const [list, setList] = useState(a);
   const [alist, setAList] = useState([])
@@ -51,7 +64,7 @@ function App() {
     <div id='app'>
       <h1 id='title'>Grocery List App</h1>
       <Header id='header' cat={list} add={Add}/>
-      <List id='body'  cat={Categories} set={setList} lst={list} pchg={ProductChange} qchg={QuantityChange} cchg={CartChange} del={Delete}/>
+      <List id='body'  set={setList} lst={list} pchg={ProductChange} qchg={QuantityChange} cchg={CartChange} del={Delete}/>
     </div>
   );
 }

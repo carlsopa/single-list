@@ -128,3 +128,8 @@ a {
 h3 {
 	font-size:1.5em;
 }
+@media screen and (device-width:360px){
+	#app{
+background: green;
+	}
+}
