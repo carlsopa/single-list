@@ -1,7 +1,7 @@
 import React ,{useState} from 'react';
 import List from './components/list';
 import Header from './components/header';
-import './grocery.css'
+import './groceryA.css'
 const a = {
   'Baking Goods':[],
   'Beverages':[],
@@ -62,9 +62,9 @@ function App() {
   }
   return (
     <div id='app'>
-      <h1 id='title'>Grocery List App</h1>
-      <Header id='header' cat={list} add={Add}/>
-      <List id='body'  set={setList} lst={list} pchg={ProductChange} qchg={QuantityChange} cchg={CartChange} del={Delete}/>
+      
+      <Header cat={list} add={Add}/>
+      <List set={setList} lst={list} pchg={ProductChange} qchg={QuantityChange} cchg={CartChange} del={Delete}/>
     </div>
   );
 }

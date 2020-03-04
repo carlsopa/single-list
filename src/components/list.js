@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './item';
-import '../grocery.css'
+import '../groceryA.css'
 
 
 const List = (props) =>{
@@ -12,32 +12,36 @@ const List = (props) =>{
  }		
 
 	return(
-		<div id='body'>
-		<div id='find'>
-			<h3>To Find:</h3>
-			<ul>
-				{
-					a.map((item,index)=>item.data.cart===false?
-					<Card key={index} index={item.index} category={item.category}
-					value={item.index} cart={item.data.cart} item={item.data.product} 
-					units={item.data.quantity} unitType={item.type} 
-			 		Productchange={props.pchg} QuantityChange={props.qchg} CartChange={props.cchg} delete={props.del}/>:null)
-				}
-			</ul>
-			</div>
-			<div id='found'>
-			<h3>Found:</h3>
-			<ul>
-				{
-					a.map((item,index)=>item.data.cart===true?
-					<Card key={index} index={item.index} category={item.category}
-					value={item.index} cart={item.data.cart} item={item.data.product} 
-					units={item.data.quantity} unitType={item.type} 
-			 		ProductChange={props.pchg} CartChange = {props.cchg} delete={props.del}/>:null)
-				}
-			</ul>
-			</div>
-		</div>
+		<main>
+			<section id='find'>
+				<header>
+					<h3>To Find:</h3>
+				</header>
+				<ul>
+					{
+						a.map((item,index)=>item.data.cart===false?
+						<Card key={index} index={item.index} category={item.category}
+						value={item.index} cart={item.data.cart} item={item.data.product} 
+						units={item.data.quantity} unitType={item.type} 
+						Productchange={props.pchg} QuantityChange={props.qchg} CartChange={props.cchg} delete={props.del}/>:null)
+					}
+				</ul>
+			</section>
+			<section id='found'>
+				<header>
+					<h3>Found:</h3>
+				</header>
+				<ul>
+					{
+						a.map((item,index)=>item.data.cart===true?
+						<Card key={index} index={item.index} category={item.category}
+						value={item.index} cart={item.data.cart} item={item.data.product} 
+						units={item.data.quantity} unitType={item.type} 
+						ProductChange={props.pchg} CartChange = {props.cchg} delete={props.del}/>:null)
+					}
+				</ul>
+			</section>
+		</main>
 	)
 }
 export default List;

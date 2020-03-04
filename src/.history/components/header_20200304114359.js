@@ -46,7 +46,7 @@ const Header = (props) => {
 	return(
 		<header>
 			<h1 id='title'>Grocery List App</h1>
-			<div id='ProductAdd'>
+			<div>
 			<div id='productDiv'>
 				<input className={!checkProduct?'alertBox':null} id='product' type="text" placeholder='Grocery Item' value={product} onChange={(e)=>setProduct(e.target.value)} required/><br/>
 				{!checkProduct ?<span id='alert'>enter item</span>:null}
