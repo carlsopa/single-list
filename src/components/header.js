@@ -54,7 +54,6 @@ const Header = (props) => {
 			<div id='category'>
 				<input list='grocery category'  value={category} onChange={(e)=>setCategory(e.target.value)}/>
 					<datalist id='grocery category'>
-					<option value=''>Category...</option>
 					{a.map((x,index)=><option value={x} key={index}>{x}</option>)	}
 				</datalist><br/>
 				{!checkCategory?<span id='alert'>Choose category</span>:null}
